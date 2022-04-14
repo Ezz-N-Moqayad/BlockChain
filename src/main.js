@@ -141,48 +141,30 @@ class Blockchain {
     }
 }
 
-
-//Writing
 function saveJSON(filename = "") {
     return file.writeFileSync(filename, JSON.stringify(blockChainCoin, null, 2));
 }
 
-//Load
 
-//Add Block 2
-console.log("Mining block 2...");
-blockChainCoin.addBlock(new Block(4, "2/04/2022", { amount: 10 }));
-//Add Block 3
-console.log("Mining block 3...");
-blockChainCoin.addBlock(new Block(5, "3/04/2022", { amount: 20 }));
-//Add Block 4
-console.log("Mining block 4...");
-blockChainCoin.addBlock(new Block(6, "4/04/2022", { amount: 30 }));
-//Add Block 5
-console.log("Mining block 5...");
-blockChainCoin.addBlock(new Block(7, "5/04/2022", { amount: 40 }));
-//Add Block 6
-console.log("Mining block 6...");
-blockChainCoin.addBlock(new Block(8, "6/04/2022", { amount: 50 }));
-//Add Block 7
-console.log("Mining block 7...");
-blockChainCoin.addBlock(new Block(9, "7/04/2022", { amount: 60 }));
+blockChainCoin.addBlock(new Block(4, "1/03/2022", { amount: 10 }));
 
-//dataSaved.json  // save
-console.log("Mining block 8...");
-blockChainCoin.addBlock(new Block(10, "8/04/2022", { amount: 70 }));
+blockChainCoin.addBlock(new Block(5, "2/03/2022", { amount: 20 }));
 
-//Save
+blockChainCoin.addBlock(new Block(6, "3/03/2022", { amount: 30 }));
+
+blockChainCoin.addBlock(new Block(7, "4/03/2022", { amount: 40 }));
+
+blockChainCoin.addBlock(new Block(8, "5/03/2022", { amount: 50 }));
+
+blockChainCoin.addBlock(new Block(9, "6/03/2022", { amount: 60 }));
+
+blockChainCoin.addBlock(new Block(10, "7/03/2022", { amount: 70 }));
+
 saveJSON("./src/dataSaved.json", data);
-
-//print
 console.log(loadJSON('./src/dataSaved.json'));
 
 module.exports.Blockchain = Blockchain;
 module.exports.Transaction = Transaction;
-
-
-
 
 
 const myKey = ec.keyFromPrivate('cs247fe316527784096af0e5a73814d4083467125f96a61b4e9d4c5de5c26481');
