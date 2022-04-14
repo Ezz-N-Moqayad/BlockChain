@@ -116,5 +116,5 @@ const tx1 = new Transaction(myWalletAddress, 'public key goes here', 10);
 tx1.signTransaction(myKey);
 savjeeCoin.addTransaction(tx1);
 
-console.log('\nStarting the miner. . . ');
+console.log('\nStarting the miner. . vnklsbvlajv. ');
 savjeeCoin.minePendingTransactions(myWalletAddress);
